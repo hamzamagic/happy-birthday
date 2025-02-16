@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buon Compleanno!</title>
+    <title>Happy Birthday</title>
     <style>
         body {
             margin: 0;
@@ -24,6 +24,19 @@
             font-size: 3em;
             color: #ff007f;
             margin-bottom: 20px;
+            opacity: 0; /* Initially hidden */
+            transform: translateY(30px); /* Start slightly lower */
+            animation: fadeIn 2s ease-out forwards; /* Smooth reveal */
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         .button {
             font-size: 1.5em;
@@ -33,6 +46,8 @@
             text-decoration: none;
             border-radius: 10px;
             margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 2s ease-out 1s forwards; /* Delayed fade-in */
         }
         .emoji {
             position: absolute;
@@ -46,7 +61,7 @@
     </style>
 </head>
 <body>
-    <h1>Buon Compleanno Zainab!!</h1>
+    <h1>Buon Compleanno Zainab!!!</h1>
     <a href="page2.html" class="button">Click Here</a>
 
     <!-- Floating emojis -->
